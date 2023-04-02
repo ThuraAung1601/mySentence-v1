@@ -180,7 +180,7 @@ $ head -5 test.hmm.result
 ```
 Make pair format with mk-pair.pl in program folder
 ```
-$ ./mk-pair.pl test.my test.hmm.result > test.hmm.TAGGED
+$ perl mk-pair.pl test.my test.hmm.result > test.hmm.TAGGED
 ```
 ```
 $ head -5 test.hmm.TAGGED
