@@ -8,6 +8,10 @@ Journal of Intelligent Informatics and Smart Technology
  - [Neural Machine Translation approach](#Neural-Machine-Translation-approach)
    - [Seq2Seq model](#Seq2Seq-model)
    - [Transformer model](#Transformer-model)
+ - [Evaluation](#Evaluation)
+   - [WER Calculation](#WER-Calculation)
+   - [chrF Calculation](#chrF-Calculation)
+   - [BLEU Score Calculation](#BLEU-Score-Calculation)
  
  ## Model guide
  - sent-models: models trained on sentence-only train data [[sent-models](sent-models)]
@@ -517,4 +521,83 @@ marian \
 
 time marian -c model.transformer.sent1/config.yml  2>&1 | tee transformer.sent1.log
 root@57452252667f:/home/ye/exp/mysent#
+```
+
+## Evaluation
+
+### WER Calculation
+The SCLITE (score speech recognition system output) program from the NIST scoring toolkit (Version:2.4.11) is used to align the machine translated hypothesis tags with error-free reference tags and calculate the word error rate (WER). <br/>
+
+Step 1: Download and Install SCTK
+```
+https://github.com/usnistgov/SCTK
+```
+Scripts: https://github.com/ye-kyaw-thu/MTRSS/tree/master/WAT2021/scripts/WER <br/>
+
+Step 2: Add id <br/>
+Directory should be ...
+```
+$ tree
+.
+├── s2s.para1.para
+│   ├── hypothesis.tg
+│   └── ref.tg
+```
+```
+$ ./add-id.sh
+```
+wer-calc.sh is ...
+```bash
+#!/bin/bash
+
+# WER calculating with sclite command
+# written by Ye Kyaw Thu, LST, NECTEC, Thailand
+# 5 June 2021
+# $ wer-calc.sh en-my my-en
+
+for arg in "$@"
+do
+   # get last 2 characters of the folder name (i.e. target language)
+   trg=${arg: -2};
+   cd $arg;
+   for idFILE in *.id;
+   do
+      if [ "$idFILE" != "ref.tg.id" ]; then
+         # to see some SYSTEM SUMMARY PERCENTAGES on screen 
+         sclite -r ./ref.tg.id -h ./$idFILE -i spu_id
+         # running with pra option 
+         sclite -r ./ref.tg.id -h ./$idFILE -i spu_id -o pra
+         # running with dtl option
+         sclite -r ./ref.tg.id -h ./$idFILE -i spu_id -o dtl
+         
+      echo -e " Finished WER calculations for $fidFILE !!! \n\n"
+      fi
+   done
+   cd ..;
+done
+```
+
+### chrF Calculation
+
+Step 1: Download chrF++ tool
+```
+wget https://raw.githubusercontent.com/m-popovic/chrF/master/chrF%2B%2B.py
+```
+
+Step 2: How to run ...
+```
+python chrf++.py -R <reference-file> -H <hypothesis-file>
+```
+
+### BLEU Calculation
+
+Step 1: Download multi-bleu.perl
+
+```
+wget https://github.com/moses-smt/mosesdecoder/blob/master/scripts/generic/multi-bleu.perl
+```
+
+Step 2: Calculate BLEU 
+```
+perl /home/ye/tool/multi-bleu.perl <reference-file> < <hypothesis-file> 
 ```
