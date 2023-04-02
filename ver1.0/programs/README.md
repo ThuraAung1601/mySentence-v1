@@ -121,9 +121,19 @@ $ head -5 train.tg
 
 ### tag-wise-report.py
 
-Print tag-wise classification report for tags 
+Print tag-wise classification report for tags <br/>
+Input files should be ...
 ```
-$ python tag-wise-report.py test.para_only.tg pySBD.para_only.tg
+$ head -5 test.tg
+	B N N N E
+	B O O O O O O N N E
+	B O O O O O O O O N N N N N N E
+	O O O O O O O O O O O N N E
+	B N N N E
+```
+How to run ...
+```
+$ python tag-wise-report.py test.tg pySBD.tg
 
               precision    recall  f1-score   support
 
