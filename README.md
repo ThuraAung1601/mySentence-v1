@@ -15,7 +15,6 @@ README file in Myanmar language: [Link](README_my.md)
 - [Publications](#Publications)
   - [Citations](#Citations)
   - [Workshop Presentation](#Workshop-Presentation)
-- [Contact](#Contact)
 
 ## Introduction
 
