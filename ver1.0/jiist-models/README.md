@@ -581,12 +581,12 @@ done
 
 Step 1: Download chrF++ tool
 ```
-wget https://raw.githubusercontent.com/m-popovic/chrF/master/chrF%2B%2B.py
+$ wget https://raw.githubusercontent.com/m-popovic/chrF/master/chrF%2B%2B.py
 ```
 
 Step 2: How to run ...
 ```
-python chrf++.py -R <reference-file> -H <hypothesis-file>
+$ python chrf++.py -R <reference-file> -H <hypothesis-file>
 ```
 
 ### BLEU Calculation
@@ -594,10 +594,10 @@ python chrf++.py -R <reference-file> -H <hypothesis-file>
 Step 1: Download multi-bleu.perl
 
 ```
-wget https://github.com/moses-smt/mosesdecoder/blob/master/scripts/generic/multi-bleu.perl
+$ wget https://github.com/moses-smt/mosesdecoder/blob/master/scripts/generic/multi-bleu.perl
 ```
 
 Step 2: Calculate BLEU 
 ```
-perl /home/ye/tool/multi-bleu.perl <reference-file> < <hypothesis-file> 
+$ perl /home/ye/tool/multi-bleu.perl <reference-file> < <hypothesis-file> 
 ```
