@@ -141,9 +141,8 @@ B O O O O O O O O O O O O O O O O N N N E
 ```
 
 ## Contributors
-- Ye Kyaw Thu (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)
-- Zar Zar Hlaing (King Mongkut's Institute of Technology Ladkrabang: KMITL, Bangkok, Thailand)
-- Thura Aung (Language Understanding Laboratary: LU Lab., Myanmar)
+- [Ye Kyaw Thu](https://sites.google.com/site/yekyawthunlp/) (National Electronics and Computer Technology Center: NECTEC, Pathumthani, Thailand)
+- [Thura Aung](https://sites.google.com/view/thura-aung/) (Language Understanding Laboratary: LU Lab., Myanmar)
 
 ## Publications
 ### Citations
@@ -156,9 +155,3 @@ If you want to use mySentence models or sentence segmentation data in your resea
 ### Workshop Presentation
 
 Thura Aung, Ye Kyaw Thu, Zar Zar Hlaing, "mySentence: Sentence Segmentation for Myanmar language using Neural Machine Translation Methods"
-
-## Contact
-
-Ye Kyaw Thu <br />
-Email: yktnlp@gmail.com <br />
-Homepage: https://sites.google.com/site/yekyawthunlp/
