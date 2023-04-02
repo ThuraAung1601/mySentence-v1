@@ -9,6 +9,10 @@ Journal of Intelligent Informatics and Smart Technology
    - [Seq2Seq model](#Seq2Seq-model)
    - [Transformer model](#Transformer-model)
  
+ ## Model guide
+ - sent-models: models trained on sentence-only train data [[sent-models](sent-models)]
+ - sent+para-models: models trained on sentence+paragraph train data [[sent+para-models](sent+para-models)] 
+
  ## Machine Learning approach
  
  ### CRF model
