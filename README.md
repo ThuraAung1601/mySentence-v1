@@ -114,6 +114,7 @@ Parallel data format was prepared for neural machine translation approach.
 ```
 $ wc ./data/data-sent/sent_parallel/*
     4712    63622   919423 test.my
+    4712    63622   919423 test.tg
    40000   543541  7868628 train.my
    40000   543541  1087082 train.tg
     2414    32315   466536 valid.my
