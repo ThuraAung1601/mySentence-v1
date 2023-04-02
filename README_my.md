@@ -1,7 +1,7 @@
 # mySentence
 Corpus and models for Burmese (Myanmar language) Sentence Segmentation
 
-README file in Myanmar language: [Link](README_my.md)
+README file in English language: [Link](README.md)
 
 - [Introduction](#Introduction)
 - [License Information](#License-Information)
@@ -51,6 +51,7 @@ Version 1.0 Release Date:
 စာ​ကြောင်း နဲ့ စာပိုဒ်ထဲက စာလုံး​တွေကို ​ဒီ အတိုင်း Tag ထားပါတယ်။
 <br/>
 /E ဆိုတဲ့ ဝါကျအဆုံးပြ Tag ၂ ခု ထက် ပိုပြီး ပါရင် စာပိုဒ် အဖြစ် သတ်မှတ်ပါတယ်။
+<br/>
 <br/>
 ​ဝါကျ စာ​ကြောင်း ကို Tag ထားတဲ့ ဥပမာ
 <br/>
