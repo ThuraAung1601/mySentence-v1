@@ -18,7 +18,7 @@ README file in Myanmar language: [Link](README_my.md)
 
 ## Introduction
 
-Sentence Segmentation can be defined as the task of segmenting text into sentences that are independent units and grammatically linked words. In the formal Myanmar language, sentences are grammatically correct and typically end with a "။" pote-ma. Informal language is more frequently used in daily conversations with others due to its easy flow. There are no predefined rules to identify the ending of sentences in informal usages for the machine itself. Some of the applications based on conversations, e.g, Automatic Speech Recognition (ASR), Speech Synthesis or Text-to-Speech (TTS), and chatbots, need to identify the end of sentences. 
+Sentence Segmentation can be defined as the task of segmenting text into sentences that are independent units and grammatically linked words. In the formal Myanmar language, sentences are grammatically correct and typically end with a "။" pote-ma. Informal language is more frequently used in daily conversations with others due to its easy flow. There are no predefined rules to identify the ending of sentences in informal usages for the machine itself. Some of the applications based on conversations, e.g, Automatic Speech Recognition (ASR), Speech Synthesis or Text-to-Speech (TTS), and chatbots, need to identify the end of sentences to improve performances. In this corpus, we tagged each token of sentences and paragraphs from the beginning to end.
 
 ## License Information
 Creative Commons Attribution-NonCommercial-Share Alike 4.0 International (CC BY-NC-SA 4.0) License. [Detail Information](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -43,7 +43,7 @@ Resources of collected Myanmar sentences and paragraphs to use for building mySe
 
 ### Word Segmentation
 
-In the Myanmar language, spaces are used only to segment phrases for easier reading. There are no clear rules for using spaces in the Myanmar language. The myPOS version 3.0 corpus has been already word-segmented manually.
+In the Myanmar language, spaces are used only to segment phrases for easier reading. There are no clear rules for using spaces in the Myanmar language.
 <br /> <br />
 We used [myWord](https://github.com/ye-kyaw-thu/myWord/) word segmentation tool to do word segmentation on our manually collected data and checked word segmentation results manually. We applied the word segmentation rules proposed by Ye Kyaw Thu et al. in [myPOS](https://github.com/ye-kyaw-thu/myPOS) corpus.
 
