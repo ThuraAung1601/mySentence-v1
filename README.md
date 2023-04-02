@@ -88,7 +88,7 @@ $ head -5 ./data/data-sent/sent_tagged/train.tagged
 ဘူမိ/B ရုပ်သွင်/O ပညာ/O သည်/O ကုန်းမြေသဏ္ဌာန်/O များ/O ကို/O လေ့လာ/O သော/N ပညာရပ်/N ဖြစ်/N သည်/E
 ```
 
-CRF format data was also prepared for the experiments with CRFSuite and NCRF++ models.
+CRF format data was also prepared for the experiments with CRF++ and NCRF++ models.
 ```
 $ wc ./data/data-sent/sent_data_crf_format/*
    68334   127244  1051379 test.col
