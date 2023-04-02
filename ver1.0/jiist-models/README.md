@@ -89,7 +89,7 @@ $ head -5 result.txt
   ဘာ/B လုပ်/N ရ/N မလဲ/N ဟင်/E
 ```
 
-### RDR models
+### RDR model
 
 Ripple Down Rule-based POSTagger <br />
 Step 1: Download RDRPOSTagger
@@ -145,7 +145,7 @@ $ head -5 test.my.TAGGED
   ဘာ/B လုပ်/N ရ/N မလဲ/N ဟင်/E
 ```
 
-### HMM models
+### HMM model
 3-gram Hidden Markov Models POSTagger with jita-0.3.3. <br />
 Step 1: Download jita-0.3.3.
 
