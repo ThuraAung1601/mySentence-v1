@@ -12,6 +12,7 @@ Journal of Intelligent Informatics and Smart Technology
    - [WER Calculation](#WER-Calculation)
    - [chrF Calculation](#chrF-Calculation)
    - [BLEU Score Calculation](#BLEU-Score-Calculation)
+ - [Results](#Results)
  
  ## Model guide
  - sent-models: models trained on sentence-only train data [[sent-models](sent-models)]
@@ -601,3 +602,9 @@ Step 2: Calculate BLEU
 ```
 $ perl /home/ye/tool/multi-bleu.perl <reference-file> < <hypothesis-file> 
 ```
+
+## Results
+
+The following tabels show the experimental results of our experiments published in JIIST.
+
+ ![jiist_results](../img/mySentence_jiist_results.png)
