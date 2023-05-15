@@ -124,7 +124,7 @@ Fri Dec 16 21:13:38 2022
 ```
 
 ## Configuration Example
-- FOr NCRF++ tool, CRF format data should be used.
+- For NCRF++ tool, CRF format data should be used.
 - Dataset format example ...
 ```
 $ head -5 ./data/data-sent/sent_data_crf_format/train.col 
