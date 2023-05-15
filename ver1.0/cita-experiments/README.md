@@ -24,7 +24,73 @@ Step 2: Download NCRF++ from github
 $ git clone https://github.com/jiesutd/NCRFpp
 ```
 
-GPU status used for the experiments
+Step 3: Check NCRFpp tool
+```
+$ tree .
+.
+├── demo.clf.config
+├── demo.decode.config
+├── demo.train.config
+├── LICENCE
+├── main_parse.py
+├── main.py
+├── model
+│   ├── charbigru.py
+│   ├── charbilstm.py
+│   ├── charcnn.py
+│   ├── crf.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── charbigru.cpython-38.pyc
+│   │   ├── charbilstm.cpython-38.pyc
+│   │   ├── charcnn.cpython-38.pyc
+│   │   ├── crf.cpython-38.pyc
+│   │   ├── __init__.cpython-38.pyc
+│   │   ├── sentclassifier.cpython-38.pyc
+│   │   ├── seqlabel.cpython-38.pyc
+│   │   ├── wordrep.cpython-38.pyc
+│   │   └── wordsequence.cpython-38.pyc
+│   ├── sentclassifier.py
+│   ├── seqlabel.py
+│   ├── wordrep.py
+│   └── wordsequence.py
+├── readme
+│   ├── architecture.png
+│   ├── Configuration.md
+│   ├── Extension.md
+│   ├── hyperparameter_tuning.md
+│   ├── logo.png
+│   ├── nbest.png
+│   └── speed.png
+├── README.md
+├── sample_data
+│   ├── dev.bmes
+│   ├── dev.cappos.bmes
+│   ├── raw.bmes
+│   ├── sample.word.emb
+│   ├── test.bmes
+│   ├── test.cappos.bmes
+│   ├── train.bmes
+│   └── train.cappos.bmes
+└── utils
+    ├── alphabet.py
+    ├── data.py
+    ├── data.py~
+    ├── functions.py
+    ├── __init__.py
+    ├── metric.py
+    ├── __pycache__
+    │   ├── alphabet.cpython-38.pyc
+    │   ├── data.cpython-38.pyc
+    │   ├── functions.cpython-38.pyc
+    │   ├── __init__.cpython-38.pyc
+    │   └── metric.cpython-38.pyc
+    └── tagSchemeConverter.py
+
+6 directories, 53 files
+```
+
+GPU used for the experiments
 ```
 Every 2.0s: nvidia-smi                                                               gpu.cadt.edu.kh: Fri Dec 16 21:13:38 2022
 Fri Dec 16 21:13:38 2022
@@ -75,72 +141,74 @@ $ head -5 ./data/data-sent/sent_data_crf_format/train.col
   - Hyperparameters
 
 ```
-### use # to comment out the configure item
+$ word-lstm.char-cnn.train.config
 
-### I/O ###
-train_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-config/data/sent/train.col
-dev_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-config/data/sent/valid.col
-test_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-config/data/sent/test.col
-model_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-model/wordlstm-charcnn
-#word_emb_dir=sample_data/sample.word.emb
+  ### use # to comment out the configure item
 
-#raw_dir=
-#decode_dir=
-#dset_dir=
-#load_model_dir=
-#char_emb_dir=
+  ### I/O ###
+  train_dir=../data/data-sent/sent_data_crf_format/train.col
+  dev_dir=../data/data-sent/sent_data_crf_format/valid.col
+  test_dir=../data/data-sent/sent_data_crf_format/test.col
+  model_dir=./mysent-model/wordlstm-charcnn
+  #word_emb_dir=sample_data/sample.word.emb
 
-norm_word_emb=False
-norm_char_emb=False
-number_normalized=True
-seg=True
-word_emb_dim=50
-char_emb_dim=30
+  #raw_dir=
+  #decode_dir=
+  #dset_dir=
+  #load_model_dir=
+  #char_emb_dir=
 
-###NetworkConfiguration###
-use_crf=False
-use_char=True
-word_seq_feature=LSTM
-char_seq_feature=CNN
-#feature=[POS] emb_size=20
-#feature=[Cap] emb_size=20
-#nbest=1
+  norm_word_emb=False
+  norm_char_emb=False
+  number_normalized=True
+  seg=True
+  word_emb_dim=50
+  char_emb_dim=30
 
-###TrainingSetting###
-status=train
-# optimizer can be SGD/Adagrad/AdaDelta/RMSprop/Adam
-optimizer=SGD
-iteration=100
-batch_size=10
-ave_batch_loss=False
+  ###NetworkConfiguration###
+  use_crf=False
+  use_char=True
+  word_seq_feature=LSTM
+  char_seq_feature=CNN
+  #feature=[POS] emb_size=20
+  #feature=[Cap] emb_size=20
+  #nbest=1
 
-###Hyperparameters###
-cnn_layer=4
-char_hidden_dim=50
-hidden_dim=200
-dropout=0.5
-lstm_layer=1
-bilstm=True
-learning_rate=0.015
-lr_decay=0.05
-momentum=0
-l2=1e-8
-gpu=True
-#clip=
-```
-- Decoding Configuration
-```
-### Decode ###
-status=decode
-#raw_dir=sample_data/raw.bmes
-raw_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-config/data/sent/test.col
-#nbest=1
-#nbest=10
-decode_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-hyp/wordlstm-charcnn.hyp
-#dset_dir=sample_data/lstmcrf.dset
-dset_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-model/wordlstm-charcnn.dset
-#load_model_dir=sample_data/lstmcrf.0.model
-load_model_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-model/wordlstm-charcnn.0.model
+  ###TrainingSetting###
+  status=train
+  # optimizer can be SGD/Adagrad/AdaDelta/RMSprop/Adam
+  optimizer=SGD
+  iteration=100
+  batch_size=10
+  ave_batch_loss=False
+
+  ###Hyperparameters###
+  cnn_layer=4
+  char_hidden_dim=50
+  hidden_dim=200
+  dropout=0.5
+  lstm_layer=1
+  bilstm=True
+  learning_rate=0.015
+  lr_decay=0.05
+  momentum=0
+  l2=1e-8
+  gpu=True
+  #clip=
+  ```
+  - Decoding Configuration
+  ```
+  ### Decode ###
+  status=decode
+  #raw_dir=sample_data/raw.bmes
+  raw_dir=../data/data-sent/sent_data_crf_format/test.col
+  #nbest=1
+  #nbest=10
+  decode_dir=./mysent-hyp/wordlstm-charcnn.hyp
+  #dset_dir=sample_data/lstmcrf.dset
+  dset_dir=./mysent-model/wordlstm-charcnn.dset
+  #load_model_dir=sample_data/lstmcrf.0.model
+  load_model_dir=./mysent-model/wordlstm-charcnn.0.model
 ```
 
 ## Training and Testing
