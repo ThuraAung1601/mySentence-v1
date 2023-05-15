@@ -133,7 +133,7 @@ $ head -5 test.tg
 ```
 How to run ...
 ```
-$ python tag-wise-report.py test.tg pySBD.tg
+$ python tag-wise-report.py test.tg hyp.tg
 
               precision    recall  f1-score   support
 
