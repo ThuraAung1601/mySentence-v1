@@ -3,8 +3,7 @@
 
 - [NCRF++ Installation](#NCRF++-Installation)
 - [Configuration Example](#Configuration-Example)
-- [Training](#Training)
-- [Testing](#Testing)
+- [Training and Testing](#Training-and-Testing)
 - [Results](#Results)
 
 For more details ...
@@ -144,12 +143,13 @@ dset_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-model/wordlstm-charcnn.dset
 load_model_dir=/home/yekyaw.thu/tool/NCRFpp/mysent-model/wordlstm-charcnn.0.model
 ```
 
-## Training 
+## Training and Testing
+### Training 
 ```
 $ python main.py --config ./mysent-config/word-lstm.char-cnn.train.config
 ```
 
-## Testing
+### Testing
 ```
 python main.py --config ./mysent-config/word-lstm.char-cnn.decode.config | tee ./mysent-model/wordlstm-charcnn.decode.log
 ```
