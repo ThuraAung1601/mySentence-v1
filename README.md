@@ -11,6 +11,7 @@ README file in Myanmar language: [Link](README_my.md)
   - [Word Segmentation](#Word-Segmentation)
   - [Corpus Annotation](#Corpus-Annotation)
   - [Data Preparation](#Data-Preparation)
+- Experiments
   - [JIIST Experiments](./ver1.0/jiist-experiments)
   - [CITA Experiments](./ver1.0/cita-experiments)
 - [Contributors](#Contributors)
