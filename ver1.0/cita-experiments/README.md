@@ -153,3 +153,12 @@ $ python main.py --config ./mysent-config/word-lstm.char-cnn.train.config
 ```
 python main.py --config ./mysent-config/word-lstm.char-cnn.decode.config | tee ./mysent-model/wordlstm-charcnn.decode.log
 ```
+
+## Results
+The following tabels show the experimental results of our experiments presented to CITA 2023.
+
+Table: Accuracy % comparison of sentence-level models
+![sent](../img/ncrf_sent_results.png)
+
+Table: Accuracy % comparison of sentence+paragraph-level models
+![para](../img/ncrf_para_results.png)
