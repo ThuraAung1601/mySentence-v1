@@ -70,6 +70,11 @@ $ head -5 ./data/data-sent/sent_data_crf_format/train.col
 ထောက်မပြ O
 ```
 - Training Configuration
+  - I/O: Input/Output data files
+  - Network Configuration
+  - Training Setting
+  - Hyperparameters
+
 ```
 ### use # to comment out the configure item
 
