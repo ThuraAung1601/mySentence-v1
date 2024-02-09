@@ -154,9 +154,9 @@ B O O O O O O O O O O O O O O O O N N N E
 ### Citations
 If you want to use mySentence models or sentence segmentation data in your research and we'd appreciate if you use the following two references:
 
-- Thura Aung, Ye Kyaw Thu, Zar Zar Hlaing, "mySentence: Sentence Segmentation for Myanmar language using Neural Machine Translation Approach"
+- Thura Aung, Ye Kyaw Thu, Zar Zar Hlaing, "mySentence: Sentence Segmentation for Myanmar Language using Neural Machine Translation Approach", Journal of Intelligent Informatics and Smart Technology, Oct 2nd Issue, 2023, pp. 1 to 9.  (Submitted Jan 5, 2023; accepted with minor revision Aug 19, 2023, revised Sept 15, 2023; published online Oct 2023.)
 
-- Ye Kyaw Thu, Thura Aung, Thepchai Supnithi, "Neural Sequence Labeling based Sentence Segmentation for Myanmar Language"
+- Ye Kyaw Thu, Thura Aung and Thepchai Supnithi, "Neural Sequence Labeling based Sentence Segmentation for Myanmar Language", the 12th Conference on Information Technology and its applications (CITA 2023), July 28-29, Danang, Vietnam, pp. 285-296
 
 ### Workshop Presentation
 
