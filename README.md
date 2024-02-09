@@ -1,4 +1,7 @@
 # mySentence
+
+Official release: https://github.com/ye-kyaw-thu/mySentence 
+
 Corpus and models for Burmese (Myanmar language) Sentence Segmentation
 
 README file in Myanmar language: [Link](README_my.md)
